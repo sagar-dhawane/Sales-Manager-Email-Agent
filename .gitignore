@@ -1,0 +1,23 @@
+# Security (CRITICAL)
+.env
+.env.local
+
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+venv/
+ENV/
+
+# OS System files
+.DS_Store
+Thumbs.db
+
+# Cursor/VS Code settings (Optional - keep if you want to share settings)
+.vscode/
