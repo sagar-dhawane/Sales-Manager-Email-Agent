@@ -39,3 +39,34 @@ When you run the script, the "Sales Manager" follows this logic:
 
 git clone [https://github.com/sagar-dhawane/Sales-Manager-Email-Agent.git](https://github.com/sagar-dhawane/Sales-Manager-Email-Agent.git)
 cd Sales-Manager-Email-Agent
+
+### 2.Set up Virtual Environment
+It's best to keep dependencies clean.
+# Mac/Linux
+python3 -m venv venv
+source venv/bin/activate
+
+# Windows
+python -m venv venv
+venv\Scripts\activate
+
+### 3. Install Dependencies
+pip install openai sendgrid python-dotenv
+
+### 4. Configure Your Keys (Important!)
+Create a file named .env in the root folder. Do not upload this file to GitHub. Add your keys inside it:
+OPENAI_API_KEY=sk-proj-your-key-here
+SENDGRID_API_KEY=SG.your-sendgrid-key-here
+
+### 5. Run the Agent
+python main.py
+📂 Project Structure
+main.py: The entry point. Initializes the agents and runs the workflow.
+
+agents.py: Contains the instructions and definitions for the 3 writer personas.
+
+tools.py: Connects to the SendGrid API.
+
+.env: Stores your private API keys (make sure this is in .gitignore!).
+
+Author: Sagar Dhawane Built with ❤️ using Python & OpenAI
