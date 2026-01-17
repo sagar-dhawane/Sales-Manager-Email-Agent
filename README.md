@@ -42,11 +42,11 @@ cd Sales-Manager-Email-Agent
 
 ### 2.Set up Virtual Environment
 It's best to keep dependencies clean.
-# Mac/Linux
+Mac/Linux
 python3 -m venv venv
 source venv/bin/activate
 
-# Windows
+Windows
 python -m venv venv
 venv\Scripts\activate
 
@@ -69,4 +69,5 @@ tools.py: Connects to the SendGrid API.
 
 .env: Stores your private API keys (make sure this is in .gitignore!).
 
-Author: Sagar Dhawane Built with ❤️ using Python & OpenAI
+## Author: Sagar Dhawane Built with ❤️ using Python & OpenAI
+
