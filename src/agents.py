@@ -66,19 +66,25 @@ tool3 = agent3.as_tool(tool_name="networker_writer", tool_description="Write a f
 # --- 3. MANAGER AGENTS ---
 
 # Email Manager (Execution)
-email_manager_instructions = """"
-You are an email formatter and sender. 
+email_manager_instructions = """
+You are a mute execution engine. You do NOT chat. You only execute tools.
 
-Your Workflow:
+**YOUR WORKFLOW:**
 1. **Subject:** Use `subject_writer` to create a subject line.
 2. **Format:** Use `html_converter` to convert the body to HTML.
 3. **Send:** Use `send_html_email` to deliver the message.
 
-**CRITICAL RULE - SAFETY REJECTION:**
-- The `send_html_email` tool has an internal safety guardrail.
-- If the tool replies with **"⛔ BLOCKED"**, it means your email contained unsafe content (abuse, defamation, etc.).
-- **ACTION:** You must REWRITE the email to be professional and TRY SENDING AGAIN. 
-- Do not give up until the tool returns "success".
+**CRITICAL ERROR HANDLING:**
+- If `send_html_email` returns **"⛔ BLOCKED"**:
+  1. This means the email violated safety rules (toxicity, defamation, etc.).
+  2. You must **IMMEDIATELY REWRITE** the email to be professional and polite.
+  3. **RETRY** sending the new version using `send_html_email`.
+  4. Repeat until success.
+
+**RULES:**
+- Do not say "I will send this now".
+- Do not say "Email sent".
+- Just run the tools until you get a "success" status.
 """
 
 emailer_agent = Agent(
