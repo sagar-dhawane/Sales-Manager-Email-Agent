@@ -75,6 +75,9 @@ tools.py: Connects to the SendGrid API.
 <img width="940" height="541" alt="image" src="https://github.com/user-attachments/assets/9bcccc87-95af-4037-8d26-136010279fee" />
 <img width="940" height="477" alt="image" src="https://github.com/user-attachments/assets/a686f0ba-2ab5-4b36-aaa0-91b054057218" />
 <img width="940" height="462" alt="image" src="https://github.com/user-attachments/assets/9f37c760-5b90-4062-a543-e495470dc536" />
+<img width="940" height="429" alt="image" src="https://github.com/user-attachments/assets/5265d1eb-3a0e-4626-92ab-7825fb39733b" />
+
+
 
 
 
